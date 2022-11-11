@@ -12,6 +12,8 @@
 
 </head>
 <style>
+
+
     
     h2 {
         font-size: 45px;
@@ -24,7 +26,9 @@
     ol {
         width: 100px;
         margin: 0;
-        padding: 20px;
+        padding-left: 30px;
+        padding-top: 25px;
+        padding-right: 10px;
         border-right: 1px solid gray;
     }
 
@@ -39,6 +43,18 @@
                 margin: 0;
             }
    
+            @media(max-width :800px){
+                #grid {
+                    display: block;
+                }
+                #grid ol {
+                    border-right: none;
+                }
+                h2 {
+                    border-bottom: none;
+                }
+
+            }
 
 </style>
 <body>
@@ -55,7 +71,7 @@
 </ol>
 
 <div>
-<h4>-What is the WEB?</h4>
+<h4><li>What is the WEB?</li></h4>
 
 <p style="margin-top: 20px;">
 The World Wide Web (WWW), commonly known as the Web, is the world's dominant software platform.[1] It was

@@ -3,15 +3,69 @@
 <head>
 <title>WEB1 - CSS </title>
 <meta charset="utf-8">
+
+<style>
+    a {
+    color: black;
+    text-decoration: none;}
+    </style>
+
 </head>
+<style>
+h2 {
+    font-size: 45px;
+    text-align: center;
+    border-bottom: 1px solid gray;
+    margin: 0;
+    color: blue;
+}
+
+ol {
+    width: 100px;
+    margin: 0;
+    padding: 20px;
+    border-right: 1px solid gray;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+}
+
+body {
+            margin: 0;
+        }
+
+        @media(max-width :800px){
+                #grid {
+                    display: block;
+                }
+                #grid ol {
+                    border-right: none;
+                }
+                h2 {
+                    border-bottom: none;
+                }
+
+            }
+
+</style>
+
 <body>
-<h1><a href="index.html">WEB</a></h1>
+
+    <span style="font-size: 18px;"><a href="note.html" target="_blank" title="HTML5 specification"><strong>code note</strong></a></span>  <span style="font-size: 12px;"> from vincent94hong</span> <br><br><br>
+
+
+<h2><a href="index.html">WEB</a></h2>
+<div id="grid">
 <ol>
 <li><a href="1.html">HTML</a></li>
 <li><a href="2.html">CSS</a></li>
 <li><a href="3.html">JavaScript</a></li>
 </ol>
-<h2>CSS란 무엇인가?</h2>
+
+<div>
+<h4><li>What is CSS?</li></h4>
 <p style="margin-top: 40px;">
 Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation
 of a document written in a markup language such as HTML.[1] CSS is a cornerstone technology
@@ -22,5 +76,6 @@ and control in the specification of presentation characteristics; enable multipl
 share formatting by specifying the relevant CSS in a separate .css file, which reduces complexity
 and repetition in the structural content
 </p>
+</div></div>
 </body>
 </html>
