@@ -18,10 +18,40 @@
 <body>
 
     <div id="note">
-        <span style="font-size: 18px;"><a href="note.html" target="_blank" title="HTML5 specification"><strong>code note</strong></a></span>  <span style="font-size: 12px;"> from vincent94hong</span> <br><br><br>
+        <span style="font-size: 18px;"><a href="note.html" target="_blank" title="HTML5 specification"><strong>code note</strong></a></span>  <span style="font-size: 12px;"> from vincent94hong</span> <br><br>
         </div>
 
-<h2><a href="index.html">WEB</a></h2>
+        <div id="head_grid">
+            <div id="button">
+            <input type="button" value="night" onclick="
+            if(this.value === 'night') {
+                var target = document.querySelector('body');
+                target.style.backgroundColor = 'black';
+                target.style.color= 'white';
+                this.value = ' day '; 
+
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while ( i < alist.length) {
+                alist[i].style.color = 'powderblue';
+                console.log(alist[i]);
+                i = i + 1 ;}}
+            else {
+                var target = document.querySelector('body');
+                target.style.backgroundColor = 'white';
+                target.style.color= 'black';
+                this.value = 'night';
+
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while ( i < alist.length) {
+                alist[i].style.color = 'black';
+                console.log(alist[i]);
+                i = i + 1 ;}}">
+            </div>
+            
+            <div id="web"><a href="index.html"><strong>WEB</strong></a></div>
+        </div>
 
 <div id="grid">
 <ol>
@@ -46,6 +76,7 @@ interactive forms may be embedded into the rendered page. HTML provides a means 
 denoting structural semantics for text such as headings, paragraphs, lists, links, quotes and other items. HTML elements are
 delineated by tags, written using angle brackets.
 </p>
+
 </div>
 </div>
 </body>
