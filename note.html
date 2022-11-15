@@ -249,6 +249,7 @@ alter user '계정명'@'접속주소' identified with mysql_native_password by '
 <p>
 <strong> MySQL Workbench preference </strong> <br>
 edit - preference - SQL Editor - Safe updates none check(맨 아래항목 체크해제) <br>
+edit - preference - SQL Execution - Limit Rows count : (조회되는 데이터 row 갯수)
 </p><br>
 
 
@@ -265,7 +266,7 @@ employees database 생성, 상단의 server-data import.-self contained File 파
 
 
 <p>
-<strong> SQL 명령어 </strong> <br>
+<strong> SQL 명령어 구분 </strong> <br>
 1. DDL : 데이터 정의어, 데이터 베이스 관리자가 사용, 데이터 베이스를 설꼐 및 생성하는 언어. create / drop / alter <br>
 2. DML : 데이터 조작어, 일반 사용자/프로그램 개발자가 사용, 데이터 베이스에 실제 데이터를 추가, 삭제, 수정, 조회하기 위해 사용하는 언어. select / insert / update / delete <br>
 3. DCL : 데이터 관리어, 데이터 베이스 관리자가 사용, 데이터 베이스 사용 권한 및 사용자 권한 제어하기 위해 사용하는 언어. grant / revoke <br><br>
@@ -274,6 +275,77 @@ employees database 생성, 상단의 server-data import.-self contained File 파
 앞으로 DML 을 주로 사용하게 될 것. 
 </p><br>
 
+
+
+<p>
+<strong> SQL 명령어 상세 </strong> <br>
+1. Select : 데이터를 조회하기 위한 명령어, where 구문을 함께 사용하여 조회시 필요한 조건을 추가하여 데이터를 조회함.<br>
+-사용법 1 : select 컬럼명1, 컬럼명2, ... from 테이블명; <br>
+-사용법 2 : select 컬럼명1, 컬럼명2, ... from 테이블명 where 조건; <br>
+* = all <br><br>
+
+2. Distinct : select 구문의 컬럼명과 함께 사용하는 명령어로 중복되는 데이터를 제거 <br>
+-사용법 : select distinct 컬럼명 ... from 테이블명;<br><br>
+
+3. Where : 데이터베이스에서 데이터를 조회할 때, 조건을 추가하는 명령어이며, 조건에 만족하는 데이터만 출력함. <br>
+select / update / delete 에서 사용됨 <br>
+-사용법 1 : select 컬럼명 ... from 테이블명 where 검색조건; <br>
+ex) select * from employees where first_name = 'mario'; > 성이 마리오인 사람을 조회/검색 <br>
+-사용법 2 : update 테이블명 set 컬럼명 ... where 검색조건; <br>
+-사용법 3 : delete from 테이블명 where 검색조건; <br><br>
+
+4. And / Or : where 구문을 사용하여 검색한 조건에 추가 조건을 사용하고자 할 경우 사용. where 구문에 추가하여 사용. <br>
+-And : 조건이 추가될 때마다 검색 정확도가 올라감 <br>
+-Or : 조건이 추가될 때마다 검색되는 데이터의 양이 늘어남 <br>
+-사용법 : select 컬럼명 ... from 테이블명 where 조건1 and(or) 조건2, and(or) 조건3, ... <br><br>
+
+5. Not : 검색 조건에 부합하지 않는 데이터를 출력할때 사용.
+-사용법 : select 컬럼명 ... from 테이블명 where not 검색조건;
+ex) select * from employees where not gender = 'M'; <br>
+ex) select * from employees where not gender = 'M' and not first_name = 'mario'; <br><br>
+
+6. Order by : 지정한 컬럼을 기준으로 데이터를 정렬하여 출력, ASC(오름차순), DESC(내림차순), where 구문 마지막에 입력. 여러 정렬 조건을 할 수 있으나 세개이상 지정시 원하는 대로 정렬되지 않을 수 있음. <br>
+-사용법 : select 컬럼명 ... from 테이블명 where 검색조건 order by 컬럼명 정렬방식(asc / desc); <br>
+ex) select * from employees order by first_name asc; <br>
+ex) select * from employees where emp_no < 15000 order by first_name asc; <br>
+ex) select * from employees order by birth_date asc, first_name asc, last_name desc; <br><br>
+
+7. Insert : 데이터 베이스에 데이터를 추가하는 명령어 <br>
+데이터 입력시 칼럼의 순서는 상관없음(사용자가 입력한 칼럼 순서에 맞는 데이터만 입력하면 됨), AI/Default로 설정된 데이터는 입력시 컬럼을 생략해도 됨, NotNull로 설정된 부분만 정확하게 데이터를 입력하면 됨, Unique로 설정된 키는 중복되는 데이터를 입력하면 안됨. <bR>
+-사용법 1 : insert into 테이블명 (칼럼명, ... ) values (데이터1 ...); <br>
+-사용법 2 : insert into 테이블명 (칼럼명, ... ) values (데이터1-1, ...), (데이터2-1, ... ), ...; <br>
+ex) insert into member (idx, mem_name, mem_phone, mem_email, mem_addr, mem_gender) values (1, '홍성훈', '01062736375', 'vincent94hong@gmail.com', '부산광역시 부산진구 서전로 9번길 20', 'Male'); <br>
+ex2) insert into member <br>
+(idx, mem_name, mem_phone, mem_email, mem_addr, mem_gender) <br>
+values <br>
+(2, '아이유', '01012345678', 'IU@gmail.com', '서울특별시', 'Female'), <br>
+(3, '유인나', '01098765432', 'U_inna@gmail.com', '서울특별시', 'Female'), <br>
+(4, '유재석', '01012341234', 'U_zaesuk@naver.com', '서울특별시', 'Male') ;<br>
+*한 줄에 전부 적지 않아도 괜찮음. 꼭 채우지않아도 되는 칼럼은 안써도됨.(NN체크된 데이터만 무조건적으로 잘 채워주면 됨.)(입력하지 않는 데이터는 칼럼명도 안적어야함. 칼럼명은 있는데 데이터가 비워지려면 '') <br><Br>
+
+8. Update : 데이터 베이스에 저장되어 있는 데이터를 수정하는 명령어 <br>
+
+
+9. Delete : 데이터 베이스에 저장되어있는 데이터를 삭제하는 명령어 <br>
+
+</p><br>
+
+
+<p>
+<strong> create table </strong> <br>
+1. database 선택 후 해당 테이블 클릭. <br>
+2. 우클릭, create table. <br>
+3. table name 설정 후, column name 추가 <br>
+*idx - int - PX, NN, AI check <br>
+*PK : 기본키 - 테이블 내에서 데이터를 구별하기 위한 유일한 값. <br>
+*NN(Not Null)(Null-데이터가 없음을 뜻함) : 데이터가 비어있으면 안됨. <br>
+*AI(Auto Increment) : 자동 값 증가 (INT 타입-숫자-만 지원) <br>
+*UQ(Unique) : 유일한 값을 의미. 중복데이터 허용 안함. <br>
+-PK를 키면 NN & UQ 가 자동으로 켜짐. UQ는 PK가 아니면서도 유일한 값이 필요할 때 사용.<br>
+-ex) 회원번호는 PK, 회원아이디는 UQ를 사용<br><br>
+
+-만들어진 테이블 우클릭 후 alter table 클릭하면 테이블 정보를 수정할 수 있음.
+</p><br>
 
 </div>
 
