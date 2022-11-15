@@ -109,7 +109,102 @@ ol : 점으로 순서없이 정리<br>
 <strong> sample </strong> <br>
 https://sylovestp.com/ <br>
 (ec2, s3, rdb:mariadb) 
+</p><br><br>
+
+<h1> 22.11.15 </h1>
+
+<p>
+<strong> MySQL </strong> <br>
+1. mysql 사이트에서 다운로드 - MySQL Community (GPL) Downloads - Installer for windows - 아래것(not web) - No thanks. <BR>
+2. port : 3306, config Type : Development computer > Use Legacy Authentication Method 선택 이후 excute-finish 까지 계속. <br>
+3. MAC 에서는 MAMP 사이트에서 다운로드하면 다른 프로그램들 사이에 MySQL 이 포함되어 있음. <br>
+4. Workbench tool 없이 데이터베이스를 사용하게 될 경우, 터미널 실행 후 아래의 'MySQL 접속'의 방법을 따른다.
 </p><br>
+
+<p>
+<strong> MySQL 접속 </strong> <br>
+1. mysql -u 계정명 -p (기본 로그인) <br>
+2. mysql -u 계정명 -h 서버주소 -p (다른 서버로 접속)<br>
+3. mysql -u 계정명 -h 서버주소 -p 포트번호 -p (다른 서버에 다른 포트로 접속)<br><br>
+
+terminal 실행<br>
+cd(Change Directory) C:\Program Files\MySQL\MySQL Server 8.0\bin(프로그램 파일주소)(enter)<br>
+dir(Directory lists) (enter)<br>
+1. mysql -u root -p (enter) k404(pw)<br><br>
+
+database 목록확인 : show databases;<br>
+지정한 database 사용 : use 데이터베이스명;<br>
+data table 목록확인 : show tables;<br><br>
+
+SELECT * FROM user; (enter) (database tables 안의 user 선택)<br>
+(Host, User, authentication_string 확인)<br>
+select host, user, authentication_string From user; (enter)<br><br>
+host : 접속주소(접속가능한 주소-접속하도록 허용된 주소), <br>
+localhost : 네트워크 상에서 자기자신을 뜻하는 주소 (IP : 127.0.0.1), <br>
+user : 아이디, <br>
+authentication_string : 비밀번호 <br><br>
+
+select from : SQL 명령어
+
+
+</p><br>
+
+
+<p>
+<strong> 사용자 생성 </strong> <br>
+1. create user '계정명'; <br>
+2. create user '계정명'@'접속주소'; <br>
+3. create user '계정명'@'접속주소'identified by '비밀번호'; <br><br>
+
+create user 'testuser1'@'localhost' identified by 'k404'; (enter) <br>
+select host, user, authentication_string from user; (enter) <br>
+> testuser1 이 추가된 것을 확인할 수 있음.<br>
+1, 2번처럼 명령하게 되면 비밀번호가 없거나 어디서든 접속 가능한 host가 생성된다.<br><br>
+
+%: MySQL의 계정정보에서 host 부분에 %로 표시되어 있으면 모든 곳에서 접속이 가능. 
+</p><br>
+
+
+<p>
+<strong> 사용자 삭제 </strong> <br>
+drop user '계정명'@'접속주소'; 
+</p><br>
+
+
+<p>
+<strong> 문자셋 </strong> <br>
+컴퓨터에서 문자를 표시하기 위한 코드표(아스키코드표) <br>
+현재는 전부 유니코드로 통합되어 utf-8 방식이 표준으로 사용되고 있으나 예전 버전에는 문자셋이 기본이었기 때문에 utf-8 로 설정이 필요했음.<br><br>
+utf-8 : 가변형 3byte <br>
+utf-16 : 기본, 고정형 4byte, 모든 문자를 표현가능 <br>
+utf-32 : 이모티콘 등까지 전부 가능)
+</p><br>
+
+<p>
+<strong> database 추가 </strong> <br>
+create database 데이터베이스명; ('문자' 형태로 적어도 구동가능)<br>
+create database 데이터베이스명 default character set utf8; (현재 버전은 상관없지만, 유지보수를 위해 알아둬야함.)
+</p><br>
+
+
+<p>
+<strong> database 삭제 </strong> <br>
+drop database 데이터베이스명; <br>
+</p><br>
+
+
+<p>
+<strong> database 사용권한 </strong> <br>
+1. 권한 확인 : show grants for '계정명'@'접속주소'; <br>
+2. 권한 설정 : grant all privileges on 데이터베이스명.테이블명(* : 모든 테이블의 권한을 주는 특수문자) to '계정명'@'접속주소';<br>
+3. 권한 삭제 : revoke all on 데이터베이스명.테이블명 from '계정명'@'접속주소';<br><br>
+
+권한을 설정할 때, 데이터베이스명에 오타가 나면 오타가난대로 데이터베이스 권한이 주어지기 때문에, 데이터베이스명의 오타를 주의해야한다.
+</p><br>
+
+    
+
+
 
 </body>
 </html>
