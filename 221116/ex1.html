@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>2, 3번째 코드 3번 반복</h2>
+<script>
+    document.write('<li>1</li>');
+    var i = 0;
+    while(i<3) {
+        document.write('<li>2</li>');
+        document.write('<li>3</li>');
+        i = i + 1;
+        }
+    document.write('<li>4</li>');
+</script>
+
+<h2>Coworkers3</h2>
+<ul>
+  <script>
+    var coworkers = ["egoing", "leezche", "duru","taeho"];
+    var i = 0;
+    while(i < 4) {
+      document.write('<li>'+ coworkers[i] + '</li>');
+      i = i + 1;
+    }
+  </script>
+</ul>
+
+<h2>Coworkers3</h2>
+<ul>
+  <script>
+    var coworkers = ["egoing", "leezche", "duru","taeho"];
+    var i = 0;
+    while(i < coworkers.length) {
+        document.write('<li><a href=http://a.com/'+ coworkers[i] + '>' + coworkers[i] + '</a></li>');      i = i + 1;
+    }
+  </script>
+</ul>
+
+
+ function nightDayHandler(self) { 
+<!--함수를 선언하는 위치 : 선언부, 매개변수(parameter) -->
+<!-- 함수를 구현하는 위치 : 구현부 -->
+
+<!-- 함수를 사용할 때 보통 "호출했다. call" 라고함. -> 함수를 사용 / 호출할 때 안에 있는 변수를 인자값(argument) 라고함 -->
+var target = document.querySelector('body');
+        if (self.value === 'night') {
+            target.style.backgroundColor = 'black';
+            target.style.color = 'white';
+            self.value = 'day'
+
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while ( i < alist.length) {
+                    alist[i].style.color = 'powderblue';
+                    console.log(alist[i]);
+                    i = i + 1;
+                }
+        } else {
+            target.style.backgroundColor = 'white';
+            target.style.color = 'black';
+            self.value = 'night'
+
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while ( i < alist.length) {
+                    alist[i].style.color = 'blue';
+                    console.log(alist[i]);
+                    i = i + 1;
+                }
+
+            }
+}
+
+
+<h2>함수사용 테스트</h2>
+<script>
+function test() { //매개변수가 없음. 함수를 정의하는 부분
+    document.write('<li>반복 확인중 테스트 함수 재사용</li>');
+    document.write('<li>빔 화질이 안좋아짐</li>');
+    }
+
+function two() { //매개변수가 없음. 함수를 정의하는 부분
+    document.write('<li>2-1</li>');
+    document.write('<li>2-2</li>');
+    }
+    
+document.write('<li>1</li>');
+test();
+two(); //함수를 사용하는 부분. 인자값.
+document.write('<li>3</li>');
+test();
+two();
+test();
+</script>
+
+
+<h2>함수사용 테스트2, 매개변수 및 인자값, 리턴값 테스트중</h2>
+<script>
+    function sum(left, right) {
+     document.write(left+right+'<br>');
+     }
+     sum(2,3);
+     sum(3,4); 
+</script>
+
+<h2>함수사용 테스트3</h2>
+<script>
+function sum(left, right) {
+ document.write(left+right+'<br>');
+ }
+function sumColorRed(left, right) {
+document.write('<div style="color: red;">' + left+right+'</div>');
+}
+ sum(2,3);
+ sumColorRed(2,3); //문자열로 취급되어 제대로 연산되지 않음.
+ sum(3,4); 
+ </script>
+
+
+<h2>함수사용 테스트4</h2>
+<script>
+function sum2(left, right) {
+    return left + right 
+ }
+document.write(sum2(2,3) + '<br>');
+document.write('<div style="color: red">'+ sum2(2,3)+'</div><br>');
+document.write('<div style="font-size: 3rem">'+sum2(2,3)+'</div><br>');
+</script>
+
+
+</body>
+</html>
