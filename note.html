@@ -346,9 +346,94 @@ values <br>
 
 -만들어진 테이블 우클릭 후 alter table 클릭하면 테이블 정보를 수정할 수 있음.
 </p><br>
-
 </div>
 
+
+
+
+
+<div class="coding_note">
+    <h1> 22.11.16 </h1>
+
+<p>
+<strong> function 정의 </strong> <br>
+function nightDayHandler(self) {  <br>
+    <strong>함수를 선언하는 위치 : 선언부, 매개변수(parameter) <br>
+    함수를 구현하는 위치 : 구현부 <br>
+    
+    함수를 사용할 때 보통 "호출했다. call" 라고함. -> 함수를 사용 / 호출할 때 안에 있는 변수를 인자값(argument) 라고함</strong><br>
+var target = document.querySelector('body'); <br>
+        if (self.value === 'night') { <br>
+            target.style.backgroundColor = 'black'; <br>
+            target.style.color = 'white'; <br>
+            self.value = 'day' <br><br>
+
+            var alist = document.querySelectorAll('a');<br>
+            var i = 0;<br>
+            while ( i < 2) {<br>
+                alist[i].style.color = 'powderblue';<br>
+                console.log(alist[i]);<br>
+                i = i + 1 ;}<br>
+            while ( i < alist.length) {<br>
+                alist[i].style.color = 'white';<br>
+                console.log(alist[i]);<br>
+                i = i + 1 ;}<br>
+            }<br>
+        else {<br>
+            target.style.backgroundColor = 'white';<br>
+            target.style.color = 'black';<br>
+            self.value = 'night'<br><br>
+
+            var alist = document.querySelectorAll('a');<br>
+            var i = 0;<br>
+            while ( i < 2) {<br>
+                alist[i].style.color = 'rgb(79, 26, 179)';<br>
+                console.log(alist[i]);<br>
+                i = i + 1 ;}<br>
+            while ( i < alist.length) {<br>
+                alist[i].style.color = 'black';<br>
+                console.log(alist[i]);<br>
+                i = i + 1 ;}<br>
+            }<br>
+}<br><br>
+
+nightDayHandler(this)라는 뜻은 nightDayHandler()라는 함수를 실행하라는 뜻. <br><br>
+
+기본 문법 배우고 매개변수(parameter)와 인자(argument)를 배우고, return 키워드 배우면 끝. <br>
+function sum(a, b) { //함수가 정의된 부분에 소괄호 안에 변수 이름: 매개변수. <br>
+return a+b <br>
+</p>
+
+
+
+<p>
+<strong> session </strong> <br>
+버튼을 통해 변경한 설정을 다른 페이지에서도 유지. <br>
+이후 크롬을 완전히 닫으면 해당 설정 초기화
+</p>
+
+
+<P><strong> JQuery </strong>
+var Links = {
+	setColor: function(color) {
+	 var alist = document.querySelector('a');
+	 var i = 0;
+	 while(i < alist.length) {
+	 alist[i].style.color = color;
+	 i = i + 1;
+	 }
+	 }
+	 }
+
+아래 함수는 jquery 를 사용해서 축약한 것.
+setColor: function(color) {
+ $('a').css('color', color);
+ }
+ }
+</P>
+
+
+</div>
 
 </body>
 </html>

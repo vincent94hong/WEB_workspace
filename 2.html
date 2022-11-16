@@ -6,6 +6,8 @@
 
 <link rel="stylesheet" href="style.css" />
 
+<script src="colors.js"></script>
+
 </head>
 
 
@@ -17,36 +19,7 @@
 
     <div id="head_grid">
         <div id="button">
-            <input type="button" value="night" onclick="
-            if(this.value === 'night') {
-                var target = document.querySelector('body');
-                target.style.backgroundColor = 'black';
-                target.style.color= 'white';
-                this.value = ' day '; 
-    
-                var alist = document.querySelectorAll('a');
-                var i = 0;
-                while ( i < alist.length) {
-                alist[i].style.color = 'powderblue';
-                console.log(alist[i]);
-                i = i + 1 ;}}
-            else {
-                var target = document.querySelector('body');
-                target.style.backgroundColor = 'white';
-                target.style.color= 'black';
-                this.value = 'night';
-                
-                var alist = document.querySelectorAll('a');
-                var i = 0;
-                while ( i < 2) {
-                alist[i].style.color = 'rgb(79, 26, 179)';
-                console.log(alist[i]);
-                i = i + 1 ;}
-            while ( i < alist.length) {
-                alist[i].style.color = 'black';
-                console.log(alist[i]);
-                i = i + 1 ;
-                }}">
+            <input type="button" value="night" onclick="nightDayHandler(this) ">
             </div>
     
     
@@ -74,8 +47,41 @@ and control in the specification of presentation characteristics; enable multipl
 share formatting by specifying the relevant CSS in a separate .css file, which reduces complexity
 and repetition in the structural content
 </p>
-
-
 </div></div>
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://web-1cvdpttf3h.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/637481f2daff0e1306d7a368/1ghvhn7kt';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+    
 </body>
 </html>

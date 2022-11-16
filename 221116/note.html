@@ -348,6 +348,13 @@ values <br>
 </p><br>
 </div>
 
+
+
+
+
+<div class="coding_note">
+    <h1> 22.11.16 </h1>
+
 <p>
 <strong> function 정의 </strong> <br>
 function nightDayHandler(self) {  <br>
@@ -395,7 +402,38 @@ nightDayHandler(this)라는 뜻은 nightDayHandler()라는 함수를 실행하�
 기본 문법 배우고 매개변수(parameter)와 인자(argument)를 배우고, return 키워드 배우면 끝. <br>
 function sum(a, b) { //함수가 정의된 부분에 소괄호 안에 변수 이름: 매개변수. <br>
 return a+b <br>
+</p>
 
+
+
+<p>
+<strong> session </strong> <br>
+버튼을 통해 변경한 설정을 다른 페이지에서도 유지. <br>
+이후 크롬을 완전히 닫으면 해당 설정 초기화
+</p>
+
+
+<P><strong> JQuery </strong>
+var Links = {
+	setColor: function(color) {
+	 var alist = document.querySelector('a');
+	 var i = 0;
+	 while(i < alist.length) {
+	 alist[i].style.color = color;
+	 i = i + 1;
+	 }
+	 }
+	 }
+
+아래 함수는 jquery 를 사용해서 축약한 것.
+setColor: function(color) {
+ $('a').css('color', color);
+ }
+ }
+</P>
+
+
+</div>
 
 </body>
 </html>
