@@ -1,0 +1,19 @@
+#home_img {
+    padding-right: 20px;
+}
+
+#main_page {
+    display : grid;
+    grid-template-columns: 3fr 500px 50px 2fr;
+    margin-top: 300px;
+}
+
+
+#profile {
+    padding-top: 3px;
+}
+
+#search {
+    padding-top: 3px;
+    padding-left : 5px
+}

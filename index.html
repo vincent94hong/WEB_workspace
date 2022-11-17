@@ -4,9 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- 부트스트랩 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  
+
 </head>
 <body>
+<div id="main_page">
+    <div id="home_img">
+    <p align="right"><a href="index.html"><img src="syc.jpg" width="300px"></a></p>
+    </div>
+    <!-- <div id="dropdown" align="center" style="padding-top : 30% ; padding-left : 20%"> -->
+
+
+    <div class="dropdown" >
+        <button  class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="width : 500px">
+            Join Community
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark" style="width : 500px;">
+          <li><a class="dropdown-item" href="#">Code review</a></li>
+          <li><a class="dropdown-item" href="#">portfolio</a></li>
+          <li><a class="dropdown-item" href="#">Job community</a></li>
+          <li><a class="dropdown-item" href="#">Question</a></li>
+          <li><a class="dropdown-item" href="#">Free posting</a></li>
+        </ul>
+      </div>
+      <div id="search">
+        <a href="search.html">
+        <img src="search.jpg" width="35px"></a>
+
+        </div>
+        <div id="profile"><a href="rogin">
+        <img src="profile.jpg" width="35px"></a>     
     
+    </div>
+</div>
+
+<form class="d-flex" role="search">
+    <input class="form-control me-2" type="search" style="color : black;" placeholder="Search" aria-label="Search">
+    
+    
+  </form>
+
+
 </body>
 </html>
