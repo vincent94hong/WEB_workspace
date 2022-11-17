@@ -16,7 +16,12 @@ var Links = {
     setColor: function(color, color2) {
         var alist = document.querySelectorAll('a');
         var i = 0;
-        while ( i < 2) {
+        while ( i < 7) {
+		    alist[i].style.color = color;
+		    console.log(alist[i]);
+		    i = i + 1;
+        }
+        while ( i < 9) {
 		    alist[i].style.color = color;
 		    console.log(alist[i]);
 		    i = i + 1;
