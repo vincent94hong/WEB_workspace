@@ -13,21 +13,21 @@
 // }
 
 var Links = {
-    setColor: function(color, color2) {
+    setColor: function(color, color2, color3) {
         var alist = document.querySelectorAll('a');
         var i = 0;
-        while ( i < 7) {
+        while ( i < 8) {
 		    alist[i].style.color = color;
 		    console.log(alist[i]);
 		    i = i + 1;
         }
-        while ( i < 9) {
-		    alist[i].style.color = color;
+        while ( i < 10) {
+		    alist[i].style.color = color2;
 		    console.log(alist[i]);
 		    i = i + 1;
 	    }
         while ( i < alist.length) {
-            alist[i].style.color = color2;
+            alist[i].style.color = color3;
             console.log(alist[i]);
             i = i + 1 ;}
     }
@@ -60,7 +60,7 @@ var target = document.querySelector('body');
             Body.setColor('white');
             self.value = ' day '
 
-            Links.setColor('powderblue', 'white');
+            Links.setColor('black', 'powderblue', 'white');
             // setColor('powderblue', 'white');
 
             //var alist = document.querySelectorAll('a');
@@ -91,6 +91,6 @@ var target = document.querySelector('body');
             //     alist[i].style.color = 'black';
             //     console.log(alist[i]);
             //     i = i + 1 ;}
-            Links.setColor('rgb(79, 26, 179)', 'black');
+            Links.setColor('black', 'rgb(79, 26, 179)', 'black');
             }
 }
