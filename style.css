@@ -4,16 +4,127 @@
 
 #main_page {
     display : grid;
-    grid-template-columns: 3fr 500px 50px 2fr;
-    margin-top: 300px;
+    grid-template-columns: 3fr 500px 45px 2fr;
+    margin-top: 400px;
 }
 
-
 #profile {
-    padding-top: 3px;
+    padding-top: 2px;
 }
 
 #search {
     padding-top: 3px;
-    padding-left : 5px
+    padding-left : 8px;
+}
+
+
+
+
+.dropbtn {
+    border: none;
+    cursor: pointer;
+    padding-bottom: 8px;
+    background-color: white;
+}
+  
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    min-width: 100px;
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+  
+.dropdown-content a:hover {
+    border-radius: 8px;
+    background-color: #f1f1f1}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+
+#pw{
+    display : grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+h6 {
+
+    padding-right : 420px;
+    text-align : center;
+
+}
+
+
+
+
+#arrange{
+    display : grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* input[type=submit] {
+    background-color: #4971b6;
+    color: white;
+    padding: 5px 15px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  } */
+
+button {
+    color: white;
+    padding: 5px 15px;
+
+    border: none;
+    cursor: pointer;
+
+  }
+
+.forgot {background-color: #9f9f9f;}
+#join {background-color: #5e5e5e;}
+#login { background-color: #4971b6;}
+  
+  /* input[type=submit]:hover {
+    background-color: #30589d;
+  } */
+  
+  /* div {
+    border-radius: 5px;
+    padding: 20px;
+  } */
+
+
+#button {
+    display : grid;
+    grid-template-columns: 1fr 1fr;
 }
