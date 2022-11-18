@@ -16,9 +16,68 @@
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+
+<style>
+.button1 {
+    margin-right : 2px;
+    background-color: white;
+    color: black;
+    border: 1px solid rgb(96, 96, 96);
+    border-radius: 5px;
+}
+.button1:hover {
+    background-color:rgb(96, 96, 96);
+    color: white;
+}
+
+
+.button2 {
+    margin-left : 3px;
+    background-color: white;
+    color: black;
+    border: 1px solid rgb(96, 96, 96);
+    border-radius: 5px;
+}
+.button2:hover {
+    background-color:rgb(96, 96, 96);
+    color: white;
+}
+
+
+.button3 {
+    margin-right : 2px;
+    background-color: rgb(96, 96, 96);
+    color: white;
+    border: 1px solid rgb(96, 96, 96);
+    border-radius: 5px;
+}
+.button3:hover {
+    background-color: white;
+    color: black;
+}
+
+.button4 {
+    margin-left : 3px;
+    background-color: rgb(84, 117, 179);
+    color: white;
+    border: 1px solid  rgb(84, 117, 179);
+    border-radius: 5px;
+}
+.button4:hover {
+    background-color: rgb(38, 75, 144);
+    color: white;
+}
+
+#btn {
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: 1fr 1fr 0.5fr 0.5fr 1fr;
+}
+</style>
+
 </head>
 <body>
-<div id="home_img" style="margin-top : 200px">
+<div id="home_img" style="margin-top : 300px">
         <p align="center"><a href="index.html"><img src="syc.jpg" width="300px" ></a></p>
 </div>
 
@@ -56,12 +115,13 @@
         
           <!-- <input type="submit"  value="Submit"> -->
         
-
-        <button class="forgot" style="border-radius: 5px;">Forgat your ID</button>
-        <button class="forgot" style="border-radius: 5px;">Forgat your PW</button>
-
-        <button id="join" style="border-radius: 5px;">Join</button>
-        <button id="login" style="border-radius: 5px; ">Login</button>
+        <div id="btn">
+        <input type="button" class="button1" value="Forgot your ID">
+        <input type="button" class="button2" value="Forgot your PW">
+        <div></div>
+        <input type="button" class="button3" value="Join" onclick="location.href='join.html'">
+        <input type="button" class="button4" value="Login" onclick="location.href='index.html'">
+        </div>
     </div>
 <div></div>
 </div>

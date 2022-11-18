@@ -2,11 +2,7 @@
     padding-right: 20px;
 }
 
-#main_page {
-    display : grid;
-    grid-template-columns: 3fr 500px 45px 2fr;
-    margin-top: 400px;
-}
+
 
 #profile {
     padding-top: 2px;
@@ -91,40 +87,4 @@ input[type=text], select {
     box-sizing: border-box;
   }
   
-  /* input[type=submit] {
-    background-color: #4971b6;
-    color: white;
-    padding: 5px 15px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  } */
 
-button {
-    color: white;
-    padding: 5px 15px;
-
-    border: none;
-    cursor: pointer;
-
-  }
-
-.forgot {background-color: #9f9f9f;}
-#join {background-color: #5e5e5e;}
-#login { background-color: #4971b6;}
-  
-  /* input[type=submit]:hover {
-    background-color: #30589d;
-  } */
-  
-  /* div {
-    border-radius: 5px;
-    padding: 20px;
-  } */
-
-
-#button {
-    display : grid;
-    grid-template-columns: 1fr 1fr;
-}
