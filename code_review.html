@@ -16,14 +16,47 @@
 
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    
 
-    <style>
+
+    <style>    
+
+
+
         #code_review_page {
-    display : grid;
-    grid-template-columns: 3fr 500px 45px 2fr;
-    margin-top: 100px;
-}
+            display : grid;
+            grid-template-columns: 1.7fr 500px 45px 100px 1fr;
+            margin-top: 50px;}
+
+        
+        .pagination {
+            justify-content: center;
+        }
+
+        .pagination a {
+            color: black;
+            border-radius: 10px;
+            border-color: white;
+        }
+
+        .pagination a:hover {
+            background-color: rgb(84, 117, 179);
+            color : white;
+        }
+
+        .write_btn {
+            margin-top: 3px;
+            background-color: #dbdbdb;
+            border-radius: 8px;
+            color : rgb(84, 117, 179);
+            border : 1px solid rgb(84, 117, 179);
+        }
+
+        .write_btn:hover {
+            background-color: rgb(84, 117, 179);
+            color : white;
+        }
+
+
     </style>
   
 
@@ -36,7 +69,7 @@
 
     <div class="dropdown" >
         <button  class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="width : 500px">
-            Join Community
+            Code Reivew
         </button>
         <ul class="dropdown-menu dropdown-menu-dark" style="width : 500px;">
           <li><a class="dropdown-item" href="code_review.html">Code review</a></li>
@@ -56,12 +89,136 @@
               <img src="profile_blue.jpeg" width="35px"></button>
             <div class="dropdown-content">
             <a href="login.html">Login</a>
-            <a href="join.html">Join us</a>
+            <a href="sign_up.html">Sign up</a>
             </div>
-          </div>
-    
+        </div>
+
+        <input type="button" aligin="left" style="height:35px; width:100px;" value="write" class="write_btn">
     </div>
 </div>
+
+
+
+
+<!-- 게시글 -->
+<div align="center">
+<div class="card mb-3" style="max-width: 1200px;">
+    <div class="row g-0">
+        <div class="col-md-4">
+                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" style="background-color : white; border-width: 0; padding : 0">
+                  <img src="code1.png" class="img-fluid rounded-start" style="height: 195px; width:400px; object-fit:cover">
+                </a>
+        </div>
+        <div class="col-md-8">
+            <div class="card-body" align="left" style="margin : 20px">
+            <h5 class="card-title"><a href="#" style="color : black; text-decoration: none;"> id display grid grid-template-columns array </a></h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 30 mins ago</small></p>
+            </div>
+        </div>
+    </div>
+    <div class="collapse" id="collapseExample">
+        <div class="card card-body" align="left" style="border : 0; border-top : 1px solid rgb(209, 209, 209);">
+          Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.<br>
+          Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="card mb-3" style="max-width: 1200px;">
+    <div class="row g-0">
+        <div class="col-md-4">
+                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2" style="background-color : white; border-width: 0; padding : 0">
+                  <img src="code2.png" class="img-fluid rounded-start" style="height: 195px; width:400px; object-fit:cover">
+                </a>
+        </div>
+        <div class="col-md-8">
+            <div class="card-body" align="left" style="margin : 20px">
+            <h5 class="card-title"><a href="#" style="color : black; text-decoration: none;">input jpg a align center setting</a></h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 30 mins ago</small></p>
+            </div>
+        </div>
+    </div>
+    <div class="collapse" id="collapseExample2">
+        <div class="card card-body" align="left" style="border : 0; border-top : 1px solid rgb(209, 209, 209);">
+          Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.<br>
+          Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="card mb-3" style="max-width: 1200px;">
+    <div class="row g-0">
+        <div class="col-md-4">
+                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3" style="background-color : white; border-width: 0; padding : 0">
+                  <img src="code3.png" class="img-fluid rounded-start" style="height: 195px; width:400px; object-fit:cover">
+                </a>
+        </div>
+        <div class="col-md-8">
+            <div class="card-body" align="left" style="margin : 20px">
+            <h5 class="card-title"><a href="#" style="color : black; text-decoration: none;">input button dropdown menu</a></h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 30 mins ago</small></p>
+            </div>
+        </div>
+    </div>
+    <div class="collapse" id="collapseExample3">
+        <div class="card card-body" align="left" style="border : 0; border-top : 1px solid rgb(209, 209, 209);">
+          Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.<br>
+          Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="card mb-3" style="max-width: 1200px;">
+    <div class="row g-0">
+        <div class="col-md-4">
+                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample4" style="background-color : white; border-width: 0; padding : 0">
+                  <img src="code4.png" class="img-fluid rounded-start" style="height: 195px; width:400px; object-fit:cover">
+                </a>
+        </div>
+        <div class="col-md-8">
+            <div class="card-body" align="left" style="margin : 20px">
+            <h5 class="card-title"><a href="#" style="color : black; text-decoration: none;">site-board jpg btn collapse</a></h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 30 mins ago</small></p>
+            </div>
+        </div>
+    </div>
+    <div class="collapse" id="collapseExample4">
+        <div class="card card-body" align="left" style="border : 0; border-top : 1px solid rgb(209, 209, 209);">
+          Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.<br>
+          Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+<!-- 페이지네이션 -->
+<ul class="pagination">
+    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">4</a></li>
+    <li class="page-item"><a class="page-link" href="#">5</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+</ul>
+
+
 
 
 </body>
