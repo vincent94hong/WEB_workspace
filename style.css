@@ -20,13 +20,15 @@
     border: none;
     cursor: pointer;
     padding-bottom: 8px;
-    background-color: white;
+    background-color: transparent;
 }
   
 .dropdown {
     position: relative;
     display: inline-block;
 }
+
+
   
 .dropdown-content {
     display: none;
@@ -52,6 +54,8 @@
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+
 
 
 

@@ -19,25 +19,37 @@
 
 
     <style>
+        body {
+            background-color: white;
+            /* background-color: #6e757c; */
+            /* background-color: #d4d4d4; */
+        }
+  
     #main_page {
         display : grid;
         grid-template-columns: 1.7fr 500px 45px 100px 1fr;
         margin-top: 400px;
-}
+    }
+
+
+
+
+
+
     </style>
-  
+    
 
 </head>
 <body>
 <div id="main_page">
     <div id="home_img">
-    <p align="right"><a href="index.html"><img src="syc.jpg" width="300px"></a></p>
+    <p align="right"><a href="index.html"><img src="syc.png" width="300px"></a></p>
     </div>
     <!-- <div id="dropdown" align="center" style="padding-top : 30% ; padding-left : 20%"> -->
 
-
-    <div class="dropdown" >
-        <button  class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="width : 500px">
+    <div id="searchAndDropdown">
+    <div id="dropdown" class="dropdown" >
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="width : 500px; display : show;">
             Join Community
         </button>
         <ul class="dropdown-menu dropdown-menu-dark" style="width : 500px;">
@@ -47,15 +59,49 @@
           <li><a class="dropdown-item" href="question.html">Question</a></li>
           <li><a class="dropdown-item" href="free_posting.html">Free posting</a></li>
         </ul>
-      </div>
-      <div id="search">
-        <a href="search.html">
-        <img src="search.jpg" width="35px"></a>
-        </div>
+    </div>
+
+        <input type="search" id="gsearch" name="gsearch" style="width : 500px; border-radius: 8px; height: 40px; border : 0; position: absolute;
+        display: none;" value="   search...">
+    </div>
+
+    <div id="search">
+        <input type="image" src="search.png" width="35px" onclick="
+        // if(this.src == 'search.png') {
+
+            this.src = 'search_wh.png';
+
+            var target = document.querySelector('body');
+            target.style.backgroundColor = '#d4d4d4';
+
+            var target = document.querySelector('#dropdown');
+            target.style.display = 'none';
+
+            var target = document.querySelector('qsearch');
+            target.style.display = 'show';
+        // }
+
+            
+        //     else {
+        //         var target = document.querySelector('body');
+        //     target.style.backgroundColor = '#d4d4d4';}
+            // var target = document.querySelector('body');
+            // target.style.backgroundColor = 'white';
+            // this.src = 'search.png';
+
+            // var target = document.querySelector('#dropdown');
+            // target.style.display = 'show';
+
+            // var target = document.querySelector('qsearch');
+            // target.style.display = 'none';}
+        ">
+    </div>
+
+      
 
         <div id="profile" class="dropdown">
             <button class="dropbtn">
-              <img src="profile_blue.jpeg" width="35px"></button>
+              <img src="profile_blue.png" width="35px"></button>
             <div class="dropdown-content">
             <a href="login.html">Login</a>
             <a href="sign_up.html">Sign up</a>
