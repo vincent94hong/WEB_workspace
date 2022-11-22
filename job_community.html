@@ -8,6 +8,7 @@
     <title>homeNot_login</title>
 
     <link rel="stylesheet" href="style.css">
+    <script src="function.js"></script>
 
     <!-- 부트스트랩 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -40,7 +41,7 @@
             color : white;
         }
 
-        .write_btn {
+        #write_btn {
             margin-top: 3px;
             background-color: #dbdbdb;
             border-radius: 8px;
@@ -48,7 +49,7 @@
             border : 1px solid rgb(84, 117, 179);
         }
 
-        .write_btn:hover {
+        #write_btn:hover {
             background-color: rgb(84, 117, 179);
             color : white;
         }
@@ -69,21 +70,24 @@
     <p align="right"><a href="index.html"><img src="syc.png" width="300px"></a></p>
     </div>
 
-    <div class="dropdown" >
-        <button  class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="width : 500px">
-            Job Community
-        </button>
-        <ul class="dropdown-menu dropdown-menu-dark" style="width : 500px;">
-          <li><a class="dropdown-item" href="code_review.html">Code review</a></li>
-          <li><a class="dropdown-item" href="portfolio.html">portfolio</a></li>
-          <li><a class="dropdown-item" href="job_community.html">Job community</a></li>
-          <li><a class="dropdown-item" href="question.html">Question</a></li>
-          <li><a class="dropdown-item" href="free_posting.html">Free posting</a></li>
-        </ul>
-      </div>
-      <div id="search">
-        <a href="search.html">
-        <img src="search.png" width="35px"></a>
+    <div id="searchAndDropdown">
+        <div id="dropdown" class="dropdown" >
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="width : 500px; display : show;">
+                Job Community
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark" style="width : 500px;">
+              <li><a class="dropdown-item" href="code_review.html">Code review</a></li>
+              <li><a class="dropdown-item" href="portfolio.html">portfolio</a></li>
+              <li><a class="dropdown-item" href="job_community.html">Job community</a></li>
+              <li><a class="dropdown-item" href="question.html">Question</a></li>
+              <li><a class="dropdown-item" href="free_posting.html">Free posting</a></li>
+            </ul>
+        </div>
+            <input type="search" id="gsearch" name="gsearch" placeholder="   search...">
+        </div>
+    
+        <div id="search_icon">
+            <input type="image" src="search.png" width="35px" style="background-color :white" onclick="searchButton(this);">
         </div>
 
         <div id="profile" class="dropdown">
@@ -95,7 +99,7 @@
             </div>
         </div>
 
-        <input type="button" aligin="left" style="height:35px; width:100px;" value="write" class="write_btn">
+        <input type="button" aligin="left" style="height:35px; width:100px;" value="Write" id="write_btn">
     </div>
 </div>
 
