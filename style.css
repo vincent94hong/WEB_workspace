@@ -116,7 +116,7 @@ input[type=text], select {
     border-radius: 8px; 
     height: 40px; 
     border : 1; 
-    border-color: #6e757c;
+    border-color: #5d6164;
     position: absolute;
     display: none; 
 }
