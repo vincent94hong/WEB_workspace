@@ -1,9 +1,9 @@
 
 // Dont Work index.html
 function searchButtonHome(self) {
-    if (self.style.backgroundColor === 'white') {
+    if (self.style.backgroundColor === 'transparent') {
     
-        self.style.backgroundColor = 'transparent';
+        self.style.backgroundColor = '#d4d4d4';
 
         var target = document.querySelector('body');
         target.style.backgroundColor = '#d4d4d4';
@@ -16,7 +16,7 @@ function searchButtonHome(self) {
     }
     
     else { 
-        self.style.backgroundColor = 'white';
+        self.style.backgroundColor = 'transparent';
 
         var target = document.querySelector('body');
         target.style.backgroundColor = 'white';
@@ -31,9 +31,9 @@ function searchButtonHome(self) {
 
 
 function searchButton(self) {
-    if (self.style.backgroundColor === 'white') {
+    if (self.style.backgroundColor === 'transparent') {
     
-        self.style.backgroundColor = 'transparent';
+        self.style.backgroundColor = 'white';
 
         var target = document.getElementById('dropdown');
         target.style.display = 'none';
@@ -47,7 +47,7 @@ function searchButton(self) {
     }
     
     else { 
-        self.style.backgroundColor = 'white';
+        self.style.backgroundColor = 'transparent';
 
         var target = document.getElementById('dropdown');
         target.style.display = 'block';
