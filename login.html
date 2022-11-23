@@ -67,6 +67,11 @@
     margin-top: 20px;
     grid-template-columns: 205px 290px 155px 150px;
 }
+
+.invalid-feedback {
+    margin-top :0px;
+}
+
 </style>
 
 <script>
@@ -112,14 +117,14 @@
         <form class="validation-form" novalidate>
         <div class="mb-3">
             <label for="fname" style="padding-left : 5px">ID</label>
-            <input type="text" id="fname" style="margin-top : 0px" name="firstname" placeholder="Your ID.." required>
+            <input type="text" id="fname" class="form-control" style="margin-top : 0px" name="firstname" placeholder="Your ID.." required>
 
             <div class="invalid-feedback"> Check your ID.</div>
         </div>
       
         <div class="mb-3">
             <label for="lname" style="padding-left : 5px">Password</label>
-            <input type="password" id="lname" style="margin-top : 0px" name="lastname" placeholder="Your Password.." required>
+            <input type="password" id="lname" class="form-control" style="margin-top : 0px" name="lastname" placeholder="Your Password.." required>
 
             <div class="invalid-feedback"> Check your Password.</div>
         </div>
