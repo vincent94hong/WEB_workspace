@@ -85,7 +85,7 @@ h6 {
 
 #arrange{
     display : grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 800px 1fr;
 }
 
 input[type=text], select {
@@ -107,6 +107,10 @@ input[type=password], select {
     border-radius: 4px;
     box-sizing: border-box;
   }
+
+
+
+  
 
 
 
