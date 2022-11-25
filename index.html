@@ -19,46 +19,47 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 
-    <style>
-        body {
-            background-color: white;
-            /* background-color: #6e757c; */
-            /* background-color: #d4d4d4; */
-        }
+<style>
+    body {
+        background-color: white;
+        /* background-color: #6e757c; */
+        /* background-color: #d4d4d4; */
+    }
   
-        #main_page {
-            display : grid;
-            grid-template-columns: 1fr 400px 500px 45px 220px 1fr;
-            margin-top: 500px;
-        }
+    #page_layout {
+        display : grid;
+        margin-top: 500px;
+        grid-template-columns: 1fr 400px 500px 45px 220px 1fr;
+    }
 
-
-    </style>
+    #dropdown_home {
+        width : 500px; 
+        display : show;
+    }
+</style>
     
-
 </head>
-<body>
-<div id="main_page">
-    <div></div>
-    <div id="home_img">
-    <p align="right"><a href="index.html"><img src="syc.png" width="300px"></a></p>
-    </div>
-    <!-- <div id="dropdown" align="center" style="padding-top : 30% ; padding-left : 20%"> -->
 
-    <div id="searchAndDropdown">
-    <div id="dropdown" class="dropdown" >
-        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="width : 500px; display : show;">
+<body>
+<div id="page_layout">
+    <div> </div>
+
+    <p id="home_img" align="right"><a href="index.html"><img src="syc.png" width="300px"></a></p>
+
+    <div>
+        <div class="dropdown" >
+            <button id="dropdown_home" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             Join Community
-        </button>
-        <ul class="dropdown-menu dropdown-menu-dark" style="width : 500px;">
-          <li><a class="dropdown-item" href="code_review.html">Code review</a></li>
-          <li><a class="dropdown-item" href="portfolio.html">portfolio</a></li>
-          <li><a class="dropdown-item" href="job_community.html">Job community</a></li>
-          <li><a class="dropdown-item" href="question.html">Question</a></li>
-          <li><a class="dropdown-item" href="free_posting.html">Free posting</a></li>
-        </ul>
-    </div>
-        <input type="search" id="gsearch_home" name="gsearch" placeholder="   search...">
+            </button>
+            <ul id="category" class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="code_review.html">Code review</a></li>
+                <li><a class="dropdown-item" href="portfolio.html">portfolio</a></li>
+                <li><a class="dropdown-item" href="job_community.html">Job community</a></li>
+                <li><a class="dropdown-item" href="question.html">Question</a></li>
+                <li><a class="dropdown-item" href="free_posting.html">Free posting</a></li>
+            </ul>
+        </div>
+        <input type="search" id="search_home" name="search" placeholder="   search...">
     </div>
 
     <div id="search_icon">

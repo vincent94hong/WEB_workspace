@@ -1,5 +1,4 @@
-
-// Dont Work index.html
+//home search button, body background color chage
 function searchButtonHome(self) {
     if (self.style.backgroundColor === 'transparent') {
     
@@ -8,10 +7,10 @@ function searchButtonHome(self) {
         var target = document.querySelector('body');
         target.style.backgroundColor = '#d4d4d4';
 
-        var target = document.getElementById('dropdown');
+        var target = document.getElementById('dropdown_home');
         target.style.display = 'none';
 
-        var target = document.getElementById('gsearch_home');
+        var target = document.getElementById('search_home');
         target.style.display = 'block';
     }
     
@@ -21,15 +20,15 @@ function searchButtonHome(self) {
         var target = document.querySelector('body');
         target.style.backgroundColor = 'white';
 
-        var target = document.getElementById('dropdown');
+        var target = document.getElementById('dropdown_home');
         target.style.display = 'block';
 
-        var target = document.getElementById('gsearch_home');
+        var target = document.getElementById('search_home');
         target.style.display = 'none';
     }
 }
 
-
+//other_page_search_button, chane to 'Search Category' from 'write'
 function searchButton(self) {
     if (self.style.backgroundColor === 'transparent') {
     
@@ -38,7 +37,7 @@ function searchButton(self) {
         var target = document.getElementById('dropdown');
         target.style.display = 'none';
 
-        var target = document.getElementById('gsearch');
+        var target = document.getElementById('search');
         target.style.display = 'block';
 
         var target = document.getElementById('write_btn');
@@ -52,7 +51,7 @@ function searchButton(self) {
         var target = document.getElementById('dropdown');
         target.style.display = 'block';
 
-        var target = document.getElementById('gsearch');
+        var target = document.getElementById('search');
         target.style.display = 'none';
 
         var target = document.getElementById('write_btn');

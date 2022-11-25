@@ -4,6 +4,10 @@
     padding-right: 20px;
 }
 
+#category {
+    width : 500px;
+}
+
 
 #code_review_page {
     display : grid;
@@ -30,10 +34,7 @@
     background-color: transparent;
 }
   
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
+
 
 
   
@@ -131,7 +132,7 @@ input[type=text] {
 
 
 
-#gsearch_home {
+#search_home {
     width : 500px; 
     border-radius: 8px; 
     height: 40px; 
@@ -141,13 +142,18 @@ input[type=text] {
 }
 
 
-#gsearch {
+#search {
     width : 500px; 
     border-radius: 8px; 
     height: 40px; 
-    border : 1; 
-    border-color: #5d6164;
+    background-color: #d4d4d4;
+    border : 0; 
     position: absolute;
     display: none; 
 }
 
+
+#dropdown {
+    width : 500px; 
+    display : show;
+}
