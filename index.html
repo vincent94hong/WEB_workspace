@@ -22,33 +22,41 @@
 <style>
     body {
         background-color: white;
-        /* background-color: #6e757c; */
-        /* background-color: #d4d4d4; */
+        /* to change, background-color: #d4d4d4; */
     }
   
-    #page_layout {
+    #layout_home {
         display : grid;
         margin-top: 500px;
         grid-template-columns: 1fr 400px 500px 45px 220px 1fr;
     }
 
-    #dropdown_home {
+    #category_home {
         width : 500px; 
         display : show;
+    }
+
+    #search_home {
+        width : 500px; 
+        border-radius: 8px; 
+        height: 40px; 
+        border : 0; 
+        position: absolute;
+        display: none; 
     }
 </style>
     
 </head>
 
 <body>
-<div id="page_layout">
+<div id="layout_home">
     <div> </div>
 
     <p id="home_img" align="right"><a href="index.html"><img src="syc.png" width="300px"></a></p>
 
     <div>
         <div class="dropdown" >
-            <button id="dropdown_home" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <button id="category_home" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             Join Community
             </button>
             <ul id="category" class="dropdown-menu dropdown-menu-dark">
@@ -67,8 +75,7 @@
     </div>
 
     <div id="profile" class="dropdown">
-        <button class="dropbtn">
-            <img src="profile_blue.png" width="35px"></button>
+        <button id="profile_button"><img src="profile_blue.png" width="35px"></button>
             <div class="dropdown-content">
             <a href="login.html">Login</a>
             <a href="sign_up.html">Sign up</a>
@@ -80,24 +87,6 @@
     </div>
 </div>
 
-
-    
-
-
-<!-- <form class="d-flex" role="search">
-    <input class="form-control me-2" type="search" style="color : black;" placeholder="Search" aria-label="Search">
-  </form> -->
-
-
 </body>
 </html>
 
-
-
-<!-- join community 창을 검색창으로 변경하는 버튼(JS 함수)
-join 드랍다운에 함수를 적용하여, 검색버튼을 누를시 검색창으로 변하는 동작을 적용.
-그리고 다른 아무곳이나 클릭하면 다시 커뮤니티 선택창으로 변경.
-검색창 활성화 되는동안 다른 백그라운드 화면 색상 변경.
-
-프로필 사진 버튼 누르면 드롭다운으로 로그인, 회원가입 버튼 나오기
- -->

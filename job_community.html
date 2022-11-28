@@ -17,49 +17,10 @@
 
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    
-
-    <style>
-        .pagination {
-            justify-content: center;
-        }
-
-        .pagination a {
-            color: black;
-            border-radius: 10px;
-            border-color: white;
-        }
-
-        .pagination a:hover {
-            background-color: rgb(84, 117, 179);
-            color : white;
-        }
-
-        #write_btn {
-            margin-top: 3px;
-            background-color: #dbdbdb;
-            border-radius: 8px;
-            color : rgb(84, 117, 179);
-            border : 1px solid rgb(84, 117, 179);
-        }
-
-        #write_btn:hover {
-            background-color: rgb(84, 117, 179);
-            color : white;
-        }
-
-        #table {
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-
-    </style>
-  
 
 </head>
 <body>
-<div id="code_review_page">
+<div id="layout_bar">
   <div></div>
     <div id="home_img">
     <p align="right"><a href="index.html"><img src="syc.png" width="300px"></a></p>
@@ -67,10 +28,10 @@
 
     <div id="searchAndDropdown">
         <div id="dropdown" class="dropdown" >
-            <button id="dropdown" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <button id="category" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Job Community
             </button>
-            <ul id="category" class="dropdown-menu dropdown-menu-dark">
+            <ul id="category_menu" class="dropdown-menu dropdown-menu-dark">
               <li><a class="dropdown-item" href="code_review.html">Code review</a></li>
               <li><a class="dropdown-item" href="portfolio.html">portfolio</a></li>
               <li><a class="dropdown-item" href="question.html">Question</a></li>

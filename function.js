@@ -7,7 +7,7 @@ function searchButtonHome(self) {
         var target = document.querySelector('body');
         target.style.backgroundColor = '#d4d4d4';
 
-        var target = document.getElementById('dropdown_home');
+        var target = document.getElementById('category_home');
         target.style.display = 'none';
 
         var target = document.getElementById('search_home');
@@ -20,7 +20,7 @@ function searchButtonHome(self) {
         var target = document.querySelector('body');
         target.style.backgroundColor = 'white';
 
-        var target = document.getElementById('dropdown_home');
+        var target = document.getElementById('category_home');
         target.style.display = 'block';
 
         var target = document.getElementById('search_home');
@@ -34,7 +34,7 @@ function searchButton(self) {
     
         self.style.backgroundColor = 'white';
 
-        var target = document.getElementById('dropdown');
+        var target = document.getElementById('category');
         target.style.display = 'none';
 
         var target = document.getElementById('search');
@@ -48,7 +48,7 @@ function searchButton(self) {
     else { 
         self.style.backgroundColor = 'transparent';
 
-        var target = document.getElementById('dropdown');
+        var target = document.getElementById('category');
         target.style.display = 'block';
 
         var target = document.getElementById('search');
